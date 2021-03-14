@@ -1,0 +1,13 @@
+---
+
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+        public: false
+    Hemmer\NewsPage\:
+        resource: ../Classes/*
+    Hemmer\NewsPage\Hooks\DataHandlerHook:
+        public: true
+    Hemmer\NewsPage\Hooks\DatabaseRecordListHook:
+        public: true

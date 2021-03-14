@@ -1,0 +1,8 @@
+[page['doktype'] == 10]
+  page.10 {
+    dataProcessing.1612604048 = Hemmer\NewsPage\DataProcessing\NewsPageProcessor
+    partialRootPaths.20 = EXT:news/Resources/Private/Partials/
+    settings < plugin.tx_news.settings
+    templateRootPaths.20 = EXT:news_page/Resources/Private/Templates/Page/
+  }
+[end]

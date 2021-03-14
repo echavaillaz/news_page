@@ -1,0 +1,40 @@
+{
+	"name": "hemmer/news-page",
+	"description": "Add a page type for the news.",
+	"type": "typo3-cms-extension",
+	"homepage": "https://hemmer.ch",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Eric Chavaillaz",
+			"email": "eric.chavaillaz@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "eric.chavaillaz@gmail.com",
+		"issues": "https://github.com/echavaillaz/news_page/issues",
+		"source": "https://github.com/echavaillaz/news_page"
+	},
+	"require": {
+		"ext-pdo": "*",
+		"georgringer/news": "^8.5",
+		"php": "^7.4",
+		"typo3/cms-core": "^10.4"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^2.18",
+		"helmich/typo3-typoscript-lint": "^2.4",
+		"roave/security-advisories": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Hemmer\\NewsPage\\": "Classes"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "news_page"
+		}
+	}
+}

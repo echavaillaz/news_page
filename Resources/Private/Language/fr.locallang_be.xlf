@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file datatype="plaintext" original="EXT:news_page/Resources/Private/Language/locallang.xlf" source-language="en" target-language="fr">
+		<header/>
+		<body>
+			<trans-unit id="hidden_news_records" resname="hidden_news_records">
+				<source>News records are hidden in pages of type "News". They are linked to the page and can be edited directly there.</source>
+				<target state="translated">Les enregistrements d'actualités sont masqués dans les pages de type "News". Ils sont liés à la page et peuvent y être modifiés directement.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

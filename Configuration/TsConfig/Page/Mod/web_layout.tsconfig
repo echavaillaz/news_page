@@ -1,0 +1,13 @@
+mod.web_layout.BackendLayouts.news {
+  config.backend_layout {
+    colCount = 12
+    rowCount = 1
+    rows.1.columns.1 {
+      colPos = 0
+      colspan = 12
+      name = LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news.content_elements
+    }
+  }
+  icon = backend-layout-news
+  title = LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news
+}
