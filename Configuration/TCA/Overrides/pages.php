@@ -80,7 +80,7 @@ defined('TYPO3') === true || die;
     ExtensionManagementUtility::registerPageTSConfigFile(
         'news_page',
         'Configuration/TsConfig/Page/Includes/news-page.tsconfig',
-        'Hemmer News Page'
+        'News Page'
     );
 
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes'][PageRepository::DOKTYPE_NEWS] = 'apps-pagetree-page-news';
