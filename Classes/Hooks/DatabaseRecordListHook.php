@@ -48,13 +48,17 @@ class DatabaseRecordListHook
             $page = $this->pageRepository->findOneById($pageId, 'doktype');
 
             if ($page['doktype'] === PageRepository::DOKTYPE_NEWS) {
-                $queryBuilder->where(...['1=2']);
+                $routePath = $this->getRoutePath();
 
-                if (self::$count === 0 && $this->getRoutePath() === '/module/web/list') {
-                    $this->addFlashMessage();
+                if ($routePath === '/module/web/list') {
+                    $queryBuilder->where(...['1=2']);
+
+                    if (self::$count === 0) {
+                        $this->addFlashMessage();
+                    }
+
+                    ++self::$count;
                 }
-
-                ++self::$count;
             }
         }
     }
