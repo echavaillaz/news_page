@@ -2,7 +2,6 @@
 	"name": "hemmer/news-page",
 	"description": "Add a page type for the news.",
 	"type": "typo3-cms-extension",
-	"homepage": "https://hemmer.ch",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
