@@ -1,5 +1,5 @@
 {
-	"name": "hemmer/news-page",
+	"name": "pint/news-page",
 	"description": "Add a page type for the news.",
 	"type": "typo3-cms-extension",
 	"license": "GPL-2.0-or-later",
@@ -28,7 +28,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Hemmer\\NewsPage\\": "Classes"
+			"Pint\\NewsPage\\": "Classes"
 		}
 	},
 	"extra": {

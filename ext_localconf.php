@@ -31,9 +31,9 @@ defined('TYPO3') === true || die;
     $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['news']['contentElementRelation'] = true;
 
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Recordlist\RecordList\DatabaseRecordList::class]['modifyQuery'][] =
-        \Hemmer\NewsPage\Hooks\DatabaseRecordListHook::class;
+        \Pint\NewsPage\Hooks\DatabaseRecordListHook::class;
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass'][] =
-        \Hemmer\NewsPage\Hooks\DataHandlerHook::class;
+        \Pint\NewsPage\Hooks\DataHandlerHook::class;
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][] =
-        \Hemmer\NewsPage\Hooks\DataHandlerHook::class;
+        \Pint\NewsPage\Hooks\DataHandlerHook::class;
 })();

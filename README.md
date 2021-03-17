@@ -32,7 +32,7 @@ Those fields are synchronized (page field -> news fields):
 
 ## Installation
 
-Install this extension via `composer req hemmer/news-page` or download it from the [TYPO3 Extension Repository](https://extensions.typo3.org/extension/news_page/) and activate the extension in the Extension Manager of your TYPO3 installation.
+Install this extension via `composer req pint/news-page` or download it from the [TYPO3 Extension Repository](https://extensions.typo3.org/extension/news_page/) and activate the extension in the Extension Manager of your TYPO3 installation.
 
 ## Configuration
 

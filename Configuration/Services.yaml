@@ -5,9 +5,9 @@ services:
         autoconfigure: true
         autowire: true
         public: false
-    Hemmer\NewsPage\:
+    Pint\NewsPage\:
         resource: ../Classes/*
-    Hemmer\NewsPage\Hooks\DataHandlerHook:
+    Pint\NewsPage\Hooks\DataHandlerHook:
         public: true
-    Hemmer\NewsPage\Hooks\DatabaseRecordListHook:
+    Pint\NewsPage\Hooks\DatabaseRecordListHook:
         public: true

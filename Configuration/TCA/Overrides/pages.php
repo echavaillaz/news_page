@@ -1,7 +1,7 @@
 <?php
 
-use Hemmer\NewsPage\Domain\Model\NewsPage;
-use Hemmer\NewsPage\Domain\Repository\PageRepository;
+use Pint\NewsPage\Domain\Model\NewsPage;
+use Pint\NewsPage\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Domain\Repository\PageRepository as CorePageRepository;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 

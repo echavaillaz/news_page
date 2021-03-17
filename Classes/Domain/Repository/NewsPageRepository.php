@@ -15,10 +15,10 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace Hemmer\NewsPage\Domain\Repository;
+namespace Pint\NewsPage\Domain\Repository;
 
 use GeorgRinger\News\Domain\Repository\NewsDefaultRepository;
-use Hemmer\NewsPage\Domain\Model\NewsPage;
+use Pint\NewsPage\Domain\Model\NewsPage;
 
 class NewsPageRepository extends NewsDefaultRepository
 {

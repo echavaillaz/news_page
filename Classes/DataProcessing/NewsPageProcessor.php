@@ -15,11 +15,11 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace Hemmer\NewsPage\DataProcessing;
+namespace Pint\NewsPage\DataProcessing;
 
-use Hemmer\NewsPage\Domain\Model\NewsPage;
-use Hemmer\NewsPage\Domain\Repository\NewsPageRepository;
-use Hemmer\NewsPage\Domain\Repository\PageRepository;
+use Pint\NewsPage\Domain\Model\NewsPage;
+use Pint\NewsPage\Domain\Repository\NewsPageRepository;
+use Pint\NewsPage\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;

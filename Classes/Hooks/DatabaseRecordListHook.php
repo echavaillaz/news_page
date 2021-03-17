@@ -15,9 +15,9 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace Hemmer\NewsPage\Hooks;
+namespace Pint\NewsPage\Hooks;
 
-use Hemmer\NewsPage\Domain\Repository\PageRepository;
+use Pint\NewsPage\Domain\Repository\PageRepository;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Localization\LanguageService;

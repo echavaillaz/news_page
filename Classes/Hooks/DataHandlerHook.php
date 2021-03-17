@@ -15,14 +15,14 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace Hemmer\NewsPage\Hooks;
+namespace Pint\NewsPage\Hooks;
 
-use Hemmer\NewsPage\Domain\Model\NewsPage;
-use Hemmer\NewsPage\Domain\Repository\ContentRepository;
-use Hemmer\NewsPage\Domain\Repository\NewsRepository;
-use Hemmer\NewsPage\Domain\Repository\PageRepository;
-use Hemmer\NewsPage\Service\PrefillService;
 use function implode;
+use Pint\NewsPage\Domain\Model\NewsPage;
+use Pint\NewsPage\Domain\Repository\ContentRepository;
+use Pint\NewsPage\Domain\Repository\NewsRepository;
+use Pint\NewsPage\Domain\Repository\PageRepository;
+use Pint\NewsPage\Service\PrefillService;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Core\LinkHandling\LinkService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

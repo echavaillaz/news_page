@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Hemmer\NewsPage\Domain\Model\NewsPage;
+use Pint\NewsPage\Domain\Model\NewsPage;
 
 return [
     NewsPage::class => [
