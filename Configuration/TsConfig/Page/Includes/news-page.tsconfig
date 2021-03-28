@@ -1,4 +1,4 @@
-mod.web_list.allowedNewTables := addToList(pages,sys_category,tt_content,tx_news_domain_model_tag)
+mod.web_list.allowedNewTables := addToList(sys_category,tx_news_domain_model_news,tx_news_domain_model_tag)
 
 ##################################################
 

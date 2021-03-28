@@ -17,86 +17,37 @@ declare(strict_types=1);
 
 namespace Pint\NewsPage\Hooks;
 
-use Pint\NewsPage\Domain\Repository\PageRepository;
-use Psr\Http\Message\ServerRequestInterface;
-use TYPO3\CMS\Core\Database\Query\QueryBuilder;
-use TYPO3\CMS\Core\Localization\LanguageService;
-use TYPO3\CMS\Core\Messaging\FlashMessage;
-use TYPO3\CMS\Core\Messaging\FlashMessageService;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Recordlist\RecordList\RecordListHookInterface;
 
-class DatabaseRecordListHook
+class DatabaseRecordListHook implements RecordListHookInterface
 {
-    protected static int $count = 0;
-    protected PageRepository $pageRepository;
-
-    public function __construct(PageRepository $pageRepository)
+    public function makeClip($table, $row, $cells, &$parentObject): array
     {
-        $this->pageRepository = $pageRepository;
+        return $cells;
     }
 
-    public function modifyQuery(
-        /** @noinspection PhpUnusedParameterInspection */
-        array $parameters,
-        string $table,
-        int $pageId,
-        array $additionalConstraints,
-        array $fieldList,
-        QueryBuilder $queryBuilder
-    ): void {
-        if ($pageId > 0 && $table === 'tx_news_domain_model_news') {
-            $page = $this->pageRepository->findOneById($pageId, 'doktype');
-
-            if ($page['doktype'] === PageRepository::DOKTYPE_NEWS) {
-                $routePath = $this->getRoutePath();
-
-                if ($routePath === '/module/web/list') {
-                    $queryBuilder->where(...['1=2']);
-
-                    if (self::$count === 0) {
-                        $this->addFlashMessage();
-                    }
-
-                    ++self::$count;
+    public function makeControl($table, $row, $cells, &$parentObject): array
+    {
+        if ($table === 'tx_news_domain_model_news' && $row['page'] > 0) {
+            foreach ($cells as $action => $cell) {
+                if ($action === 'delete' || $action === 'hide') {
+                    $cells[$action] = $parentObject->spaceIcon;
+                } else {
+                    $cells[$action] = $cell;
                 }
             }
         }
+
+        return $cells;
     }
 
-    protected function addFlashMessage(): void
+    public function renderListHeader($table, $currentIdList, $headerColumns, &$parentObject): array
     {
-        GeneralUtility::makeInstance(FlashMessageService::class)->getMessageQueueByIdentifier()->enqueue(
-            GeneralUtility::makeInstance(
-                FlashMessage::class,
-                $this->translate('hidden_news_records'),
-                '',
-                FlashMessage::INFO
-            )
-        );
+        return $headerColumns;
     }
 
-    protected function getLanguagePath(): string
+    public function renderListHeaderActions($table, $currentIdList, $cells, &$parentObject): array
     {
-        return 'LLL:EXT:news_page/Resources/Private/Language/locallang_be.xlf:';
-    }
-
-    protected function getLanguageService(): LanguageService
-    {
-        return $GLOBALS['LANG'];
-    }
-
-    protected function getRequest(): ServerRequestInterface
-    {
-        return $GLOBALS['TYPO3_REQUEST'];
-    }
-
-    protected function getRoutePath(): string
-    {
-        return $this->getRequest()->getAttribute('routePath');
-    }
-
-    protected function translate(string $label): string
-    {
-        return $this->getLanguageService()->sL($this->getLanguagePath() . $label);
+        return $cells;
     }
 }
