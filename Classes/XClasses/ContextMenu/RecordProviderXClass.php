@@ -15,7 +15,7 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace Pint\NewsPage\Hooks;
+namespace Pint\NewsPage\XClasses\ContextMenu;
 
 use TYPO3\CMS\Recordlist\RecordList\RecordListHookInterface;
 
