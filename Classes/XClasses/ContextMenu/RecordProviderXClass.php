@@ -17,10 +17,26 @@ declare(strict_types=1);
 
 namespace Pint\NewsPage\XClasses\ContextMenu;
 
-use TYPO3\CMS\Recordlist\RecordList\RecordListHookInterface;
-
 class RecordProviderXClass extends RecordProvider
 {
+    protected function canBeCopied(): bool
+    {
+        if ($this->isNewsPageRecord() === true) {
+            return false;
+        }
+
+        return parent::canBeCopied();
+    }
+
+    protected function canBeCut(): bool
+    {
+        if ($this->isNewsPageRecord() === true) {
+            return false;
+        }
+
+        return parent::canBeCut();
+    }
+
     protected function canBeDeleted(): bool
     {
         if ($this->isNewsPageRecord() === true) {
@@ -39,6 +55,15 @@ class RecordProviderXClass extends RecordProvider
         return parent::canBeDisabled();
     }
 
+    protected function canBeEdited(): bool
+    {
+        if ($this->isNewsPageRecord() === true) {
+            return false;
+        }
+
+        return parent::canBeEdited();
+    }
+
     protected function canBeEnabled(): bool
     {
         if ($this->isNewsPageRecord() === true) {
@@ -46,6 +71,15 @@ class RecordProviderXClass extends RecordProvider
         }
 
         return parent::canBeEnabled();
+    }
+
+    protected function canBePastedAfter(): bool
+    {
+        if ($this->isNewsPageRecord() === true) {
+            return false;
+        }
+
+        return parent::canBePastedAfter();
     }
 
     protected function isNewsPageRecord(): bool

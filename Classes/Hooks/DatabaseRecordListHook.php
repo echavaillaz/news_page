@@ -23,6 +23,12 @@ class DatabaseRecordListHook implements RecordListHookInterface
 {
     public function makeClip($table, $row, $cells, &$parentObject): array
     {
+        if ($table === 'tx_news_domain_model_news' && $row['page'] > 0) {
+            foreach ($cells as $action => $cell) {
+                $cells[$action] = $parentObject->spaceIcon;
+            }
+        }
+
         return $cells;
     }
 
@@ -30,7 +36,7 @@ class DatabaseRecordListHook implements RecordListHookInterface
     {
         if ($table === 'tx_news_domain_model_news' && $row['page'] > 0) {
             foreach ($cells as $action => $cell) {
-                if ($action === 'delete' || $action === 'hide') {
+                if ($action === 'delete' || $action === 'edit' || $action === 'hide') {
                     $cells[$action] = $parentObject->spaceIcon;
                 } else {
                     $cells[$action] = $cell;
