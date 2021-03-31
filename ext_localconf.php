@@ -32,11 +32,13 @@ defined('TYPO3') === true || die;
 
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list_extra.inc']['actions'][] =
         \Pint\NewsPage\Hooks\DatabaseRecordListHook::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list_extra.inc']['getTable'][] =
+        \Pint\NewsPage\Hooks\DatabaseRecordListHook::class;
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass'][] =
         \Pint\NewsPage\Hooks\DataHandlerHook::class;
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][] =
         \Pint\NewsPage\Hooks\DataHandlerHook::class;
 
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Backend\ContextMenu\ItemProviders\RecordProvider::class]['className'] =
-        \Pint\NewsPage\XClasses\ContextMenu\RecordProviderXClass::class;
+        \Pint\NewsPage\XClass\ContextMenu\RecordProviderXClass::class;
 })();

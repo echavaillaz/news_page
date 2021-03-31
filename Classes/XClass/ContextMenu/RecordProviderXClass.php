@@ -15,7 +15,7 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace Pint\NewsPage\XClasses\ContextMenu;
+namespace Pint\NewsPage\XClass\ContextMenu;
 
 use Pint\NewsPage\Domain\Repository\PageRepository;
 use TYPO3\CMS\Backend\ContextMenu\ItemProviders\RecordProvider;
@@ -74,6 +74,15 @@ class RecordProviderXClass extends RecordProvider
         }
 
         return parent::canBeEnabled();
+    }
+
+    protected function canBeNew(): bool
+    {
+        if ($this->isNewsPageRecord() === true) {
+            return false;
+        }
+
+        return parent::canBeNew();
     }
 
     protected function canBePastedAfter(): bool

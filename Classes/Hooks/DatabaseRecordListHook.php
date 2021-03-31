@@ -17,10 +17,20 @@ declare(strict_types=1);
 
 namespace Pint\NewsPage\Hooks;
 
+use TYPO3\CMS\Backend\RecordList\RecordListGetTableHookInterface;
 use TYPO3\CMS\Recordlist\RecordList\RecordListHookInterface;
 
-class DatabaseRecordListHook implements RecordListHookInterface
+class DatabaseRecordListHook implements RecordListGetTableHookInterface, RecordListHookInterface
 {
+    public function getDBlistQuery($table, $pageId, &$additionalWhereClause, &$selectedFieldsList, &$parentObject): void
+    {
+        if ($table === 'tx_news_domain_model_news') {
+            $parentObject->clickTitleMode = '';
+            $parentObject->deniedNewTables[] = 'tx_news_domain_model_news';
+            $parentObject->disableSingleTableView = true;
+        }
+    }
+
     public function makeClip($table, $row, $cells, &$parentObject): array
     {
         if ($table === 'tx_news_domain_model_news' && $row['page'] > 0) {
@@ -36,10 +46,8 @@ class DatabaseRecordListHook implements RecordListHookInterface
     {
         if ($table === 'tx_news_domain_model_news' && $row['page'] > 0) {
             foreach ($cells as $action => $cell) {
-                if ($action === 'delete' || $action === 'edit' || $action === 'hide') {
+                if ($action === 'delete' || $action === 'edit' || $action === 'hide' || $action === 'new') {
                     $cells[$action] = $parentObject->spaceIcon;
-                } else {
-                    $cells[$action] = $cell;
                 }
             }
         }
