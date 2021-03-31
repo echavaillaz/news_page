@@ -17,6 +17,9 @@ declare(strict_types=1);
 
 namespace Pint\NewsPage\XClasses\ContextMenu;
 
+use Pint\NewsPage\Domain\Repository\PageRepository;
+use TYPO3\CMS\Backend\ContextMenu\ItemProviders\RecordProvider;
+
 class RecordProviderXClass extends RecordProvider
 {
     protected function canBeCopied(): bool
