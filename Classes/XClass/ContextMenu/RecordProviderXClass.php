@@ -98,6 +98,6 @@ class RecordProviderXClass extends RecordProvider
     {
         return $this->table === 'tx_news_domain_model_news'
             && $this->pageRecord['doktype'] === PageRepository::DOKTYPE_NEWS
-            && $this->record['page'] > 0;
+            && $this->pageRecord['news'] > 0;
     }
 }
