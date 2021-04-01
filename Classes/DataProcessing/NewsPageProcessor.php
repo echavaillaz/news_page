@@ -32,7 +32,7 @@ class NewsPageProcessor implements DataProcessorInterface
         array $processorConfiguration,
         array $processedData
     ): array {
-        if ($this->hasToProcess($processedData['data']['doktype']) === true) {
+        if ($processedData['data']['doktype'] === PageRepository::DOKTYPE_NEWS) {
             $processedData['newsItem'] = $this->getNewsItem($this->getPageId($processedData['data']));
         }
 
@@ -47,10 +47,5 @@ class NewsPageProcessor implements DataProcessorInterface
     protected function getPageId(array $page): int
     {
         return $page['sys_language_uid'] === 0 ? $page['uid'] : $page['_PAGES_OVERLAY_UID'];
-    }
-
-    protected function hasToProcess(int $doktype): bool
-    {
-        return $doktype === PageRepository::DOKTYPE_NEWS;
     }
 }
