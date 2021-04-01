@@ -24,13 +24,11 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 abstract class AbstractRepository
 {
-    protected ConnectionPool $connectionPool;
     protected QueryBuilder $queryBuilder;
 
     public function __construct(ConnectionPool $connectionPool)
     {
-        $this->connectionPool = $connectionPool;
-        $this->queryBuilder = $this->connectionPool->getQueryBuilderForTable(static::TABLE);
+        $this->queryBuilder = $connectionPool->getQueryBuilderForTable(static::TABLE);
         $this->queryBuilder->getRestrictions()->removeAll();
     }
 
