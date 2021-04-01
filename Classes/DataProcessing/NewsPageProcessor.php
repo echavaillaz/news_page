@@ -44,8 +44,8 @@ class NewsPageProcessor implements DataProcessorInterface
         return GeneralUtility::makeInstance(NewsPageRepository::class)->findOneByPageId($pageId);
     }
 
-    protected function getPageId(array $page): int
+    protected function getPageId(array $pageRecord): int
     {
-        return $page['sys_language_uid'] === 0 ? $page['uid'] : $page['_PAGES_OVERLAY_UID'];
+        return $pageRecord['sys_language_uid'] === 0 ? $pageRecord['uid'] : $pageRecord['_PAGES_OVERLAY_UID'];
     }
 }
