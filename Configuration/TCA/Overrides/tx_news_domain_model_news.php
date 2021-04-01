@@ -5,12 +5,6 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 defined('TYPO3') === true || die;
 
 (static function () {
-    if ($GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['label_alt'] !== null) {
-        $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['label_alt'] .= ',page';
-    } else {
-        $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['label_alt'] = 'page';
-    }
-
     ExtensionManagementUtility::addTCAcolumns(
         'tx_news_domain_model_news',
         [
