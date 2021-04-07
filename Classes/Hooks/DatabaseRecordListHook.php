@@ -70,8 +70,12 @@ class DatabaseRecordListHook implements RecordListGetTableHookInterface, RecordL
         return $cells;
     }
 
-    protected function isNewsPageRecord(string $table, array $pageRecord): bool
+    protected function isNewsPageRecord(string $table, array $pageRecord = null): bool
     {
+        if ($pageRecord === null) {
+            return false;
+        }
+
         return $table === 'tx_news_domain_model_news'
             && $pageRecord['doktype'] === PageRepository::DOKTYPE_NEWS
             && $pageRecord['news'] > 0;
