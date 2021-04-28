@@ -17,8 +17,8 @@ declare(strict_types=1);
 
 namespace Pint\NewsPage\Hooks;
 
-use Pint\NewsPage\Domain\Repository\PageRepository;
 use function is_array;
+use Pint\NewsPage\Domain\Repository\PageRepository;
 use Psr\Http\Message\ServerRequestInterface;
 use function reset;
 use TYPO3\CMS\Backend\Controller\PageLayoutController;
