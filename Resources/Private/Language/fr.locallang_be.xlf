@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="EXT:news_page/Resources/Private/Language/locallang_be.xlf" source-language="en" target-language="fr">
+		<header/>
+		<body>
+			<trans-unit id="edit_news_record" resname="edit_news_record">
+				<source>Edit "%s"</source>
+				<target state="translated">Éditer "%s"</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

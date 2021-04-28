@@ -13,3 +13,5 @@ services:
         public: true
     Pint\NewsPage\Hooks\DatabaseRecordListHook:
         public: true
+    Pint\NewsPage\Hooks\DrawHeaderHook:
+        public: true
