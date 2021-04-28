@@ -151,10 +151,12 @@ class DataHandlerHook
                 }
                 break;
             case 'tt_content':
-                $this->processContentElement($this->contentRepository->findOneById(
-                    $status === 'new' ? (int)$dataHandler->substNEWwithIDs[$id] : (int)$id,
-                    'pid,tx_news_related_news,uid'
-                ));
+                $this->processContentElement(
+                    $this->contentRepository->findOneById(
+                        $status === 'new' ? (int)$dataHandler->substNEWwithIDs[$id] : (int)$id,
+                        'pid,tx_news_related_news,uid'
+                    )
+                );
                 break;
         }
     }
