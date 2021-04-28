@@ -7,6 +7,8 @@ services:
         public: false
     Pint\NewsPage\:
         resource: ../Classes/*
+    Pint\NewsPage\DataProcessing\NewsPageProcessor:
+        public: true
     Pint\NewsPage\Hooks\DataHandlerHook:
         public: true
     Pint\NewsPage\Hooks\DatabaseRecordListHook:
