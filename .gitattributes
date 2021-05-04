@@ -2,7 +2,7 @@
 /.editorconfig export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
-/.php_cs.dist export-ignore
+/.php-cs-fixer.php export-ignore
 /.yamllint export-ignore
 /typoscript-lint.dist.yml export-ignore
 /typoscript-lint.yml export-ignore
