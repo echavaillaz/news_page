@@ -6,7 +6,7 @@ $EM_CONF['news_page'] = [
     'category' => 'fe',
     'constraints' => [
         'depends' => [
-            'news' => '8.5.0-8.99.99',
+            'news' => '8.6.0-8.99.99',
             'php' => '7.4.0-7.4.99',
             'typo3' => '10.4.0-10.4.99'
         ]

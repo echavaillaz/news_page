@@ -17,13 +17,13 @@
 	},
 	"require": {
 		"ext-pdo": "*",
-		"georgringer/news": "^8.5",
+		"georgringer/news": "^8.6",
 		"php": "^7.4",
 		"typo3/cms-core": "^10.4"
 	},
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^3.0",
-		"helmich/typo3-typoscript-lint": "^2.4",
+		"helmich/typo3-typoscript-lint": "^2.5",
 		"roave/security-advisories": "dev-latest"
 	},
 	"autoload": {
