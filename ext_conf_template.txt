@@ -1,0 +1,2 @@
+# cat=basic/enable/10; type=boolean; label=Hide edit button in page module
+hideEditButtonInPageModule = 0
