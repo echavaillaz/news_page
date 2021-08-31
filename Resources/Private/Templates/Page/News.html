@@ -90,8 +90,8 @@
                             <f:then>
                                 <f:variable name="backPid" value="{settings.backPid}"/>
                             </f:then>
-                            <f:else if="{newsItem.backPid}">
-                                <f:variable name="backPid" value="{newsItem.backPid}"/>
+                            <f:else if="{newsItem.backPage}">
+                                <f:variable name="backPid" value="{newsItem.backPage}"/>
                             </f:else>
                         </f:if>
                         <f:if condition="{backPid}">
