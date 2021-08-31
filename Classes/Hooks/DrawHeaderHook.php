@@ -104,8 +104,7 @@ class DrawHeaderHook
 
     protected function getTemplatePath(): string
     {
-        return ExtensionManagementUtility::extPath('mr_news_page')
-            . 'Resources/Private/Templates/PageLayout/Header.html';
+        return ExtensionManagementUtility::extPath('news_page') . 'Resources/Private/Templates/PageLayout/Header.html';
     }
 
     protected function isNewsPageRecord(array $pageRecord): bool
