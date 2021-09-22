@@ -6,3 +6,7 @@ TCAdefaults.pages {
   backend_layout = pagets__news
   doktype = 10
 }
+
+##################################################
+
+TCEMAIN.table.tx_news_domain_model_news.disableHideAtCopy = 1
