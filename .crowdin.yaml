@@ -1,8 +1,8 @@
 ---
 
 files:
-    -
-        ignore:
-            - /Resources/Private/Language/fr.*
-        source: /Resources/Private/Language/
-        translation: '%original_path%/%two_letters_code%.%original_file_name%'
+  -
+    ignore:
+      - /Resources/Private/Language/fr.*
+    source: /Resources/Private/Language/
+    translation: '%original_path%/%two_letters_code%.%original_file_name%'

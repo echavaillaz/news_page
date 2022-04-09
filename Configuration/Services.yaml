@@ -1,9 +1,9 @@
 ---
 
 services:
-    _defaults:
-        autoconfigure: true
-        autowire: true
-        public: false
-    Pint\NewsPage\:
-        resource: ../Classes/*
+  _defaults:
+    autoconfigure: true
+    autowire: true
+    public: false
+  Pint\NewsPage\:
+    resource: ../Classes/*

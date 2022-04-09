@@ -11,5 +11,5 @@ trim_trailing_whitespace = true
 [*.{json,xlf}]
 indent_style = tab
 
-[*.{tsconfig,typoscript}]
+[*.{tsconfig,typoscript,yaml,yml}]
 indent_size = 2

@@ -1,11 +1,11 @@
 ---
 
 filePatterns:
-    - '*.tsconfig'
-    - '*.typoscript'
+  - '*.tsconfig'
+  - '*.typoscript'
 sniffs:
-    -
-        class: Indentation
-        parameters:
-            indentConditions: true
-            indentPerLevel: 2
+  -
+    class: Indentation
+    parameters:
+      indentConditions: true
+      indentPerLevel: 2
