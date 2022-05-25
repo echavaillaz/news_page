@@ -4,7 +4,6 @@
 /.gitignore export-ignore
 /.php-cs-fixer.php export-ignore
 /.yamllint export-ignore
-/typoscript-lint.dist.yml export-ignore
 /typoscript-lint.yml export-ignore
 
 *.html text eol=lf
