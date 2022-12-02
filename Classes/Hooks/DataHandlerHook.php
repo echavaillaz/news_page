@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Pint\NewsPage\Hooks;
 
-use function implode;
 use Pint\NewsPage\Domain\Model\NewsPage;
 use Pint\NewsPage\Domain\Repository\ContentRepository;
 use Pint\NewsPage\Domain\Repository\NewsRepository;
@@ -14,6 +13,8 @@ use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Core\LinkHandling\LinkService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\StringUtility;
+
+use function implode;
 
 class DataHandlerHook
 {

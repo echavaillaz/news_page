@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Pint\NewsPage\Service;
 
 use GeorgRinger\News\Domain\Model\Dto\EmConfiguration;
-use function strtotime;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+
+use function strtotime;
 
 class PrefillService
 {

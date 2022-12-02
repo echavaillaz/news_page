@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Pint\NewsPage\Hooks;
 
-use function is_array;
 use Pint\NewsPage\Domain\Repository\PageRepository;
 use Psr\Http\Message\ServerRequestInterface;
-use function reset;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Backend\Controller\PageLayoutController;
 use TYPO3\CMS\Backend\Routing\UriBuilder;
@@ -15,6 +13,9 @@ use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
+
+use function is_array;
+use function reset;
 
 class DrawHeaderHook
 {
